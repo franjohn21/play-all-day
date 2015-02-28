@@ -1,0 +1,13 @@
+
+<div id="sidebar">
+  Logged in as: <%= @current_user.email %>
+  <a class="btn btn-danger" href="/logout">Logout</a>
+</div>
+<div id="map" ></div>
+
+ <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF7bNkrouk4BrhFzk3mFUIRlBceQsKxXo">
+    </script>
+
+<%= content_tag :div, id: "event_info", data: {events: @events} do %>
+<% end %>

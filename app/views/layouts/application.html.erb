@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PlayAllDay</title>
+  <title>Tipoff Sports</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,16 +12,15 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#" style="text-shadow: 0px 0px 2px #3F3F3f;">
-        PLAY ALL DAY
+        <img src='/logo.png' style="height:100%;"></img>
       </a>
     </div>
-    <div class="nav navbar-nav navbar-right">
       <a href="/"><i class="fa fa-home fa-2x spacing"></i></a>
-    </div>
   </div>
 </nav>
 
+<div id="content">
 <%= yield %>
-
+</div>
 </body>
 </html>
