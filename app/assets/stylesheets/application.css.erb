@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require_tree ../../../vendor/assets/stylesheets/.
+ *= require font-awesome
+ */
+.spacing{
+  padding: 10px;
+}
+
+body{
+  background-image: url(<%= image_path "basketball-court.jpg" %>);
+  background-size: cover;
+}
+
+.landing{
+  color: white;
+}
+
+.landing .row{
+  margin-top: 150px;
+}
+
+.landing a{
+  padding: 12px 20px;
+  font-size: 1.5em;
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  transition: all 1s ease-in-out;
+}
+.landing a:hover{
+  background-color: transparent;
+  color: black;
+}
+
+#signup-button{
+  background-color: transparent;
+  color: black;
+}
+#signup-button:hover{
+  background-color: black;
+  color: white;
+}
+
+#map{
+  float:left;
+  width: calc(200% / 3);
+}
+
+#sidebar{
+  float:left;
+  background-color: #eee;
+  width: calc(100% / 3);
+}

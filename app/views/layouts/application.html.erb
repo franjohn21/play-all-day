@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PlayAllDay</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="text-shadow: 0px 0px 2px #3F3F3f;">
+        PLAY ALL DAY
+      </a>
+    </div>
+    <div class="nav navbar-nav navbar-right">
+      <a href="/"><i class="fa fa-home fa-2x spacing"></i></a>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
