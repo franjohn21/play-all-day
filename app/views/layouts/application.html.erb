@@ -16,6 +16,11 @@
       </a>
     </div>
       <a href="/"><i class="fa fa-home fa-2x spacing"></i></a>
+      <div class="nav navbar-right">
+      <% if @current_user %>
+        <a class="btn btn-danger" href="/logout" style="margin: 10px 10px 0px 0px;">Logout</a>
+      <% end %>
+      </div>
   </div>
 </nav>
 

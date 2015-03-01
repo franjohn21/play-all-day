@@ -17,22 +17,24 @@
  */
 ul{
   list-style-type: none;
+  padding-left: 0px;
 }
-
+body{
+  font-family: 'Ariel';
+}
 .spacing{
   padding: 10px;
 }
 nav.navbar{
   margin-bottom: 0px;
 }
-html, body, #map { height: 100%; margin: 0; padding: 0;}
+html, body, #map { min-height: 100%; margin: 0; padding: 0;}
 #content{
   background-image: url(<%= image_path "basketball-court.jpg" %>);
   background-size: cover;
   position:absolute;
-  top:50;
   left: 0;
-  height: calc(100% - 50px);
+  min-height: calc(100% - 50px);
   width: 100%;
 }
 
@@ -72,12 +74,66 @@ html, body, #map { height: 100%; margin: 0; padding: 0;}
 
 #map{
   float:left;
-  width: calc(200% / 3);
+  width: 75%;
+  box-shadow: 0px 0px 1px black;
 }
 
 #sidebar{
   float:left;
-  background-color: #eee;
-  width: calc(100% / 3);
+  background-color: transparent;
+  width: 25%;
   height: 100%;
+  color: white;
+}
+#fb-name{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#fb-email{
+
+}
+
+.sidebar_events{
+  padding: 10px;
+}
+
+.event-node{
+  color: #3F3F3F;
+  background-color: white;
+  opacity: 0.9;
+  padding: 5px;
+  margin: 3px;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+#sidebar .event-node-link{
+  text-decoration: none;
+}
+.event-node:hover{
+  background-color: #eee;
+}
+.event-show{
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px black;
+  padding: 40px;
+  margin: 10px;
+}
+
+.user-node{
+  box-shadow: 0px 0px 3px #3F3F3F;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+.show-image{
+  float: left; 
+  height: 50px; 
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px #3f3f3f;
+  margin: 3px;
 }

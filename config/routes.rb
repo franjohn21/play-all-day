@@ -9,8 +9,8 @@ Rails.application.routes.draw do
 
   get '/home' => 'application#home'
 
-  post '/rsvp' => 'event#rsvp'
-
+  post '/rsvp' => 'events#rsvp'
+  get '/auth/facebook/callback', to: 'sessions#fb_create'
   resources :events
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.

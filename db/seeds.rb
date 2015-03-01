@@ -7,17 +7,17 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 user = User.create(email: 'francis.john@coloroado.edu', password: 'password')
-user.events_created << Event.create({location_name: "Everett Alvarez Junior Park", title: "Let's Play Basketball", latitude: 37.333787, longitude: -121.955933, num_people: 5})
-user.events_created << Event.create({location_name: "City Sports Club", title: "Anyone up for a game?", latitude: 37.348935, longitude: -121.919541, num_people: 3})
-user.events_created << Event.create({location_name: "Jenny Strand Park", title: "BBall!", latitude: 37.327371, longitude: -122.002968, num_people: 10})
-user.events_created << Event.create({location_name: "Homeridge Park", title: "Volleyball!", latitude: 37.335970, longitude: -121.983055, num_people: 5})
-user.events_created << Event.create({location_name: "Watson Park", title: "Frisbee anyone?", latitude: 37.358078, longitude: -121.875595, num_people: 2})
+user.events_created << Event.create({start_time: Time.now + 3, img_url: 'http://lorempixel.com/400/200/sports/', location_name: "Everett Alvarez Junior Park", title: "Let's Play Basketball", latitude: 37.333787, longitude: -121.955933, num_people: 5})
+user.events_created << Event.create({start_time: Time.now + 2, img_url: 'http://lorempixel.com/400/200/sports/', location_name: "City Sports Club", title: "Anyone up for a game?", latitude: 37.348935, longitude: -121.919541, num_people: 3})
+user.events_created << Event.create({start_time: Time.now + 1, img_url: 'http://lorempixel.com/400/200/sports/', location_name: "Jenny Strand Park", title: "BBall!", latitude: 37.327371, longitude: -122.002968, num_people: 10})
+user.events_created << Event.create({start_time: Time.now + 5, img_url: 'http://lorempixel.com/400/200/sports/', location_name: "Homeridge Park", title: "Volleyball!", latitude: 37.335970, longitude: -121.983055, num_people: 5})
+user.events_created << Event.create({start_time: Time.now + 9, img_url: 'http://lorempixel.com/400/200/sports/', location_name: "Watson Park", title: "Frisbee anyone?", latitude: 37.358078, longitude: -121.875595, num_people: 2})
 user.save!
 
 10.times do 
 
 
-  User.create(:email => Faker::Internet.email, :password => Faker::Lorem.word) 
+  User.create(:name => Faker::Name.name, :email => Faker::Internet.email, :password => Faker::Lorem.word, img_url: Faker::Avatar.image) 
 end
 
 10.times do

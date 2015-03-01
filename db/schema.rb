@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150228185008) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "events", force: true do |t|
     t.datetime "start_time"
     t.integer  "user_id"
@@ -22,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150228185008) do
     t.string   "longitude"
     t.string   "latitude"
     t.integer  "num_people"
+    t.string   "img_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,6 +43,8 @@ ActiveRecord::Schema.define(version: 20150228185008) do
     t.string   "username"
     t.string   "password_digest"
     t.string   "fb_id"
+    t.string   "img_url"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

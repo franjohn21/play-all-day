@@ -11,7 +11,13 @@ class EventsController < ApplicationController
   end
 
   def rsvp
-    UserEvent.create(event_id: params[:event_id], user_id: @current_user.id, attending: true)
+    exists = UserEvent.find_by(event_id: params[:event_id], user_id: @current_user.id)
+    if exists
+      exists.attending = !exists.attending
+      exists.save!
+    else
+      UserEvent.create(event_id: params[:event_id], user_id: @current_user.id, attending: true)
+    end
     render :json => 'success'
   end
 
@@ -22,7 +28,7 @@ class EventsController < ApplicationController
     @event.user_events.where(:attending => true).each do |userevent|
       @users << User.find(userevent.user_id)
     end
-    
+
   end
 
 

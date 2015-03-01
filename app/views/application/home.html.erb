@@ -1,20 +1,4 @@
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1550889165170169',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 <div class="container text-center landing">
   <h2>Welcome</h2>
   <img src='/logo.png' style="height:100px;"></img>
@@ -25,7 +9,7 @@
         <a href="/login" class="btn btn-block">Login</a>
       </div>
       <div class="row">
-        <a href="/signup" class="btn btn-block" id="facebook-button">Login With Facebook</a>
+        <a href="/auth/facebook" class="btn btn-block" id="facebook-button">Login With Facebook</a>
       </div>
       <div class="row">
         <a href="/signup" class="btn btn-block">Sign Up</a>

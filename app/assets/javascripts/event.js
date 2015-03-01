@@ -8,6 +8,15 @@ $(function(){
     $("#sidebar").height($(window).height() - 50);
   })
 
+  $(".event-node").mouseover(function(){
+    var id = $(this).attr("id").match(/\d+/);
+    infoList[id].open(map, markerList[id]);
+    map.panTo(markerList[id].getPosition());
+  });
+  $(".event-node").mouseout(function(){
+    var id = $(this).attr("id").match(/\d+/);
+    infoList[id].close();
+  })
 
   $('body').on('click', '.rsvp', rsvp)
 
@@ -69,6 +78,8 @@ $(function(){
     e.preventDefault();
     $.post('/rsvp', {event_id: $(this).closest('.info-window').attr('id')})
     $num = $(this).siblings('.num-going').find('.num');
+    $secondnum = $("#event-" + $(this).closest('.info-window').attr('id')).find('.num_going')
+    $secondnum.text(parseInt($num.text()) + 1);
     $num.text(parseInt($num.text()) + 1);
   }
 
